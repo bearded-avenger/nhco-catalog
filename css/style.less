@@ -1,0 +1,183 @@
+@import 'variables.less';
+@import 'mixins.less';
+@import 'grid.less';
+
+.ba-nhco-catalog-wrap {
+    padding-right:20px;
+    .box-sizing(border-box);
+}
+
+.ba-nhco-catalog-head {
+    background:#ececec;
+    margin-left:-19px;
+    .box-shadow(inset 0 -5px 5px -1px rgba(0,0,0,0.1));
+    border-bottom:1px solid #ccc;
+    padding:30px 20px;
+    .box-sizing(border-box);
+}
+
+.ba-nhco-catalog-welcome {
+    .ba-nhco-catalog-logo {
+        float: left;
+        margin-right:10px;
+    }
+    .ba-nhco-catalog-title {
+        overflow: hidden;
+        margin:0 0 5px;
+        line-height:1.2em;
+    }
+
+    .ba-nhco-catalog-site {
+        float: left;
+        .clearfix();
+        margin:5px 0 0;
+    }
+}
+
+// news 
+.ba-nhco-catalog-news-feed {
+
+    .ba-nhco-news-title {
+        margin:0 0 10px;
+        width:90%;
+        float: left;
+        .clearfix();
+
+    }
+
+    .ba-nhco-news-all {
+        float: right;
+    }
+
+   ul {
+
+        li {
+            width:32.666%;
+            float:left;
+            padding:10px;
+            .box-sizing(border-box);
+            background:#fff;
+            margin-right:1%;
+            border:1px solid #dfdfdf;
+            .box-shadow(0 1px 0 #f9f9f9);
+            border-radius:2px;
+
+            &:last-child {
+                margin-right:0;
+            }
+
+            h4 {
+                margin:0 0 10px;
+
+                a {
+                    color: inherit;
+
+                    &:hover {
+                        text-decoration: none;
+                        color:#21759b;
+                    }
+                }
+            }
+        }
+   }
+}
+
+.ba-nhco-catalog-item {
+    background: @edd-cat-base;
+    border:1px solid darken(@edd-cat-base,5);
+    border-radius:2px;
+
+    &.is-installed {
+        .opacity(.5);
+    }
+
+    .ba-nhco-catalog-item-title {
+        margin:0;
+        padding:7px 10px;
+        .box-sizing(border-box);
+        #gradient > .vertical(#F9F9F9,#ECECEC);
+        border-bottom-color: #dfdfdf;
+        text-shadow: #fff 0 1px 0;
+        .box-shadow(0 1px 0 #fff);
+        font-size: 15px;
+        font-weight: 400;
+        font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+    }
+
+    .ba-nhco-catalog-item-inner {
+        padding:6px;
+        .box-sizing(border-box);
+    }
+
+    .ba-nhco-catalog-img-link {
+        display: block;
+        img {
+            width: 100%;
+            border:1px solid transparent;
+            .box-sizing(border-box);
+        }
+
+        &:hover {
+            img {
+                border-color: #21759b;
+                .transition(all .2s linear);
+
+            }
+        }
+
+        &:active {
+            img {
+                border-color:darken(#21759b,10);
+      
+            }
+        }
+    }
+    .ba-nhco-catalog-notify {
+        background: #07a1cd;
+        color: white;
+        text-shadow:none;
+        display: block;
+        font-size:14px;
+        text-transform: uppercase;
+        line-height: 16px;
+        text-decoration: none;
+        padding:10px 16px;
+        box-sizing:border-box;
+        border-radius:2px;
+        text-align: center;
+        margin-top:4px;
+
+        &:hover {
+            color:white;
+            background: darken(#07a1cd,10);
+        }
+
+        &.installed {
+            background: @brand-success;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
