@@ -8,6 +8,12 @@ Version: 1.0
 Description: Displays all products and keeps track of installed products from Nick Haskins & CO.
 */
 
-require_once('inc/data.php');
-require_once('inc/news-feed.php');
-require_once('inc/load.php');
+class nhCoCatalog {
+
+	public function __construct(){
+		require_once('inc/data.php');
+		require_once('inc/news-feed.php');
+		require_once('inc/load.php');
+	}
+}
+new nhCoCatalog;
