@@ -11,9 +11,18 @@ Description: Displays all products and keeps track of installed products from Ni
 class nhCoCatalog {
 
 	public function __construct(){
+
 		require_once('inc/data.php');
 		require_once('inc/news-feed.php');
 		require_once('inc/load.php');
+
+		// Load Updater
+		if( !class_exists( 'EDD_SL_Plugin_Updater' ) ) {
+			// load our custom updater
+			require_once( 'EDD_SL_Plugin_Updater.php' );
+		}
+
+		require_once('updater.php');
 	}
 }
 new nhCoCatalog;
